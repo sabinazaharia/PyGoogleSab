@@ -46,3 +46,6 @@ afișarea elementelor multipli ai lui 3
 for e in lista:
     if e%3 == 0:
         print(e)
+
+multiple_3_list = [number for number in lista if number % 3 == 0]
+print(multiple_3_list)
