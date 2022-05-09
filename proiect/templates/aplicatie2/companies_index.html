@@ -25,6 +25,14 @@
                     <span>Inactiv</span>
                 {% endif %}
                 </td>
+                <td>
+                    <a href="{% url 'companies:modifica' item.id %}" class="btn btn-info">Modifica</a>
+                    {% if item.activ == 1 %}
+                    <a href="{% url 'companies:sterge' item.id %}" class="btn btn-danger">Sterge</a>
+                    {% else %}
+                    <a href="{% url 'companies:activeaza' item.id %}" class="btn btn-success">Activeaza</a>
+                    {% endif%}
+                </td>
             </tr>
         {% endfor %}
         </tbody>
