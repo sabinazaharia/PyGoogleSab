@@ -20,6 +20,7 @@ class CreateLocationView(LoginRequiredMixin, CreateView):
     def get_success_url(self):
         return reverse('locations:lista_locatii')
 
+
 class UpdateLocationView(LoginRequiredMixin, UpdateView):
     model = Locations
     fields = ['city', 'country']
